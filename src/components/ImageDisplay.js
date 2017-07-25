@@ -13,7 +13,7 @@ class ImageDisplay extends Component {
       ]
     }
     return (
-      <div>
+      <div className="imageReturns">
         {imageArray.map((imgURL)=>{
           return(
             <div key={imgURL.id}>

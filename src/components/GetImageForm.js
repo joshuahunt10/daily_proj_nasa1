@@ -59,7 +59,7 @@ class GetImageForm extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleImageReq}>
+        <form className="input" onSubmit={this.handleImageReq}>
           <label htmlFor="rover">Rover</label>
           <select onChange={this.handleRover} id="rover" value={this.state.value}>
             <option value="Curiosity">Curiosity</option>
@@ -74,7 +74,9 @@ class GetImageForm extends Component {
           </select>
           <label htmlFor="sol">Martian Sol: 1000-2000</label>
           <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.value}/>
-          <GetImageButton />
+          <div>
+            <GetImageButton />
+          </div>
         </form>
         <ImageDisplay images={this.state.images}/>
       </div>
